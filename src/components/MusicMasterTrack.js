@@ -3,10 +3,11 @@ import React, { Component } from "react";
 class MusicMasterTrack extends Component {
   render() {
     const { tracks } = this.props;
-    <h1></h1>
+    <h1></h1>;
 
     return (
       <div>
+        {/* yah nira bigreko */}
         {tracks.map(track => {
           const { id, name, album } = track;
           return (
@@ -16,7 +17,6 @@ class MusicMasterTrack extends Component {
             </div>
           );
         })}
-        h1fjafjsa
       </div>
     );
   }
