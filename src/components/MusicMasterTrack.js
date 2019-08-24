@@ -3,16 +3,19 @@ import React, { Component } from "react";
 class MusicMasterTrack extends Component {
   render() {
     const { tracks } = this.props;
-    <h1></h1>;
+    console.log("tracks:", tracks);
 
     return (
-      <div>
-        {/* yah nira bigreko */}
+      <div className="cardContainer">
         {tracks.map(track => {
           const { id, name, album } = track;
           return (
-            <div key={id}>
-              <img src={album.images[0]} alt="album" />
+            <div key={id} className="card">
+              <img
+                src={album.images[0].url}
+                alt="albumArt"
+                className="cardImage"
+              />
               <p>{name}</p>
             </div>
           );

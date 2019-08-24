@@ -22,7 +22,7 @@ class MusicMaster extends Component {
 
           fetch(`${API_ADDRESS}/artist/${artist.id}/top-tracks`)
             .then(response => response.json())
-            .then(json => this.setState({ tracks: json }))
+            .then(json => this.setState({ tracks: json.tracks }))
             .catch(error => alert(error.message));
         } else alert("Artist not Found");
       })
